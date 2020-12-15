@@ -19,7 +19,7 @@ class OverviewPage extends ConsumerWidget {
         builder: (context, isConnected) {
           if (isConnected.hasData) {
             if (isConnected.data) {
-              // marketDataProvider.loadIndices();
+               marketDataProvider.loadIndices();
             }
             return StreamBuilder<List<MarketIndexData>>(
               stream: marketDataProvider.indicesData(),
@@ -44,7 +44,7 @@ class OverviewPage extends ConsumerWidget {
                     child: Text('No Internet Connection'),
                   );
                 } else {
-                  // marketDataProvider.loadIndices();
+                   marketDataProvider.loadIndices();
                   return Center(
                     child: CircularProgressIndicator(),
                   );
